@@ -41,7 +41,11 @@ func (uc *TaskUseCase) CreateTask(ctx context.Context, in CreateTaskInput) (*dom
 		return nil, err
 	}
 
-	if err := uc.queue.Publish(ctx, "tasks.created", event); err != nil {
+	if err := uc.queue.Publish(ctx, "tasks.created", &domain.TaskCreatedEvent{
+		Title:     task.Title,
+		ProjectID: task.ProjectID,
+		TaskID:    task.ID,
+	}); err != nil {
 		// TODO: add outbox
 		return nil, err
 	}
