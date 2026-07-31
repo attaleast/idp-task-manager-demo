@@ -2,8 +2,8 @@ github.com/Azure/go-ansiterm v0.0.0-20230124172434-306776ec8161 h1:L/gRVlceqvL25
 github.com/Azure/go-ansiterm v0.0.0-20230124172434-306776ec8161/go.mod h1:xomTg63KZ2rFqZQzSB4Vz2SUXa1BpHTVz9L5PTmPC4E=
 github.com/Microsoft/go-winio v0.6.2 h1:F2VQgta7ecxGYO8k3ZZz3RS8fVIXVxONVUPlNERoyfY=
 github.com/Microsoft/go-winio v0.6.2/go.mod h1:yd8OoFMLzJbo9gZq8j5qaps8bJ9aShtEA8Ipt1oGCvU=
-github.com/attaleast/idp-sdk v1.0.3 h1:4PH04IWrQlKThxdeBEsllJn8x4t2bc4ZnLsOnxMj2NU=
-github.com/attaleast/idp-sdk v1.0.3/go.mod h1:xh2UhfLa8s+aQCAHhNztFsyUPp8KNBTzFTUhRbX6xyA=
+github.com/attaleast/idp-sdk v1.0.4 h1:nQ01ygG2BKZS17qku/+jsY65kpj9aSKQUSZE1ROjKC0=
+github.com/attaleast/idp-sdk v1.0.4/go.mod h1:ai7rPYYNkv2V+gP8popJ1HxKVKFK5GFM5KfC4rM+jUc=
 github.com/cespare/xxhash/v2 v2.3.0 h1:UL815xU9SqsFlibzuggzjXhog7bL6oX9BbNZnL2UFvs=
 github.com/cespare/xxhash/v2 v2.3.0/go.mod h1:VGX0DQ3Q6kWi7AoAeZDth3/j3BFtOZR5XLFGgcrjCOs=
 github.com/containerd/errdefs v1.0.0 h1:tg5yIfIlQIrxYtu9ajqY42W3lpS19XqdxRQeEwYG8PI=

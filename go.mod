@@ -3,7 +3,7 @@ module github.com/attaleast/idp-task-manager-demo
 go 1.26.5
 
 require (
-	github.com/attaleast/idp-sdk v1.0.3
+	github.com/attaleast/idp-sdk v1.0.4
 	github.com/go-chi/chi/v5 v5.3.1
 	github.com/google/uuid v1.6.0
 	github.com/jackc/pgx/v5 v5.10.0
