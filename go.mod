@@ -3,13 +3,14 @@ module github.com/attaleast/idp-task-manager-demo
 go 1.26.5
 
 require (
-	github.com/attaleast/idp-sdk v1.0.2
+	github.com/attaleast/idp-sdk v1.0.3
 	github.com/go-chi/chi/v5 v5.3.1
 	github.com/google/uuid v1.6.0
 	github.com/jackc/pgx/v5 v5.10.0
 )
 
 require (
+	github.com/go-chi/cors v1.2.2 // indirect
 	github.com/golang-migrate/migrate/v4 v4.19.1 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20240606120523-5a60cdf6a761 // indirect
