@@ -21,14 +21,14 @@ const (
 )
 
 type Task struct {
-	ID          uuid.UUID
-	ProjectID   uuid.UUID
-	Title       string
-	Description string
-	Status      TaskStatus
-	AssigneeID  *uuid.UUID
-	CreatedAt   time.Time
-	UpdatedAt   time.Time
+	ID          uuid.UUID  `json:"id"`
+	ProjectID   uuid.UUID  `json:"project_id"`
+	Title       string     `json:"title"`
+	Description string     `json:"description"`
+	Status      TaskStatus `json:"status"`
+	AssigneeID  *uuid.UUID `json:"assignee_id"`
+	CreatedAt   time.Time  `json:"created_at"`
+	UpdatedAt   time.Time  `json:"updated_at"`
 }
 
 func (t *Task) ChangeStatus(newStatus TaskStatus) error {
