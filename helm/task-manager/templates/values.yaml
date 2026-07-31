@@ -1,3 +1,3 @@
 image:
-  repository: ghcr.io/attaleast/task-manager
+  repository: ghcr.io/attaleast/idp-task-manager-demo
   tag: latest
