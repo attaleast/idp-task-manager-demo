@@ -13,7 +13,7 @@ import (
 	"github.com/attaleast/idp-task-manager-demo/internal/application"
 	"github.com/attaleast/idp-task-manager-demo/internal/infrastructure/postgres"
 
-	taskhttp "github/attaleast/idp-task-manager-demo/internal/infrastructure/http"
+	taskhttp "github.com/attaleast/idp-task-manager-demo/internal/infrastructure/http"
 )
 
 func main() {

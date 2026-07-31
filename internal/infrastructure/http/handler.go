@@ -5,7 +5,6 @@ import (
 	"net/http"
 
 	"github.com/attaleast/idp-task-manager-demo/internal/application"
-	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/v5"
 	"github.com/google/uuid"
 )
