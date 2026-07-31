@@ -29,6 +29,10 @@ func main() {
 	}
 	defer dbPool.Close()
 
+	if err := database.RunMigrations(cfg.DBUrl, "file://internal/db/migrations"); err != nil {
+		logger.Warn("failed to run migations (might be alppied)", "error", err)
+	}
+
 	natsBus, err := messaging.NewNATS(cfg.NATSUrl)
 	if err != nil {
 		logger.Error("nats error", "error", err)
