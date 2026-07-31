@@ -12,6 +12,7 @@ type TaskRepository interface {
 	Create(ctx context.Context, task *domain.Task) error
 	GetByID(ctx context.Context, id uuid.UUID) (*domain.Task, error)
 	Update(ctx context.Context, task *domain.Task) error
+	ListByProject(ctx context.Context, projectID uuid.UUID) ([]*domain.Task, error)
 }
 
 type TaskUseCase struct {
@@ -51,4 +52,8 @@ func (uc *TaskUseCase) CreateTask(ctx context.Context, in CreateTaskInput) (*dom
 	}
 
 	return task, nil
+}
+
+func (uc *TaskUseCase) ListTasks(ctx context.Context, projectID uuid.UUID) ([]*domain.Task, error) {
+	return uc.repo.ListByProject(ctx, projectID)
 }

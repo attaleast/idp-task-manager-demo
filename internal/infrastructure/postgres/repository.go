@@ -62,3 +62,29 @@ func (r *TaskRepository) Update(ctx context.Context, t *domain.Task) error {
 	_, err := r.q.UpdateTaskStatus(ctx, args)
 	return err
 }
+
+func (r *TaskRepository) ListByProject(ctx context.Context, projectID uuid.UUID) ([]*domain.Task, error) {
+	rows, err := r.q.ListTasksByProject(ctx, projectID)
+	if err != nil {
+		return nil, err
+	}
+
+	tasks := make([]*domain.Task, 0, len(rows))
+	for _, row := range rows {
+		var desc string
+		if row.Description != nil {
+			desc = *row.Description
+		}
+
+		task := &domain.Task{
+			ID:          row.ID,
+			Title:       row.Title,
+			Description: desc,
+			Status:      domain.TaskStatus(row.Status),
+			CreatedAt:   row.CreatedAt.Time,
+		}
+		tasks = append(tasks, task)
+	}
+
+	return tasks, nil
+}
