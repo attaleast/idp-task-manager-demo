@@ -9,6 +9,6 @@ FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 COPY --from=builder /task-manager .
-COPY internal/db/migrations .internal/db/migrations
+COPY db/migrations ./db/migrations
 EXPOSE 8080
 CMD ["./task-manager"]
